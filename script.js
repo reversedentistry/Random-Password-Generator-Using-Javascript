@@ -17,21 +17,21 @@ function writePassword() {
 
   var passLength = window.prompt("How many characters would you like your password to be? Enter a number between 8 and 128.")
 
-  var lowerPrompt = window.prompt("Would you like lowercase letters to be included? Enter Y or N.");
+  var lowerPrompt = window.confirm("Would you like lowercase letters to be included?");
   // If Y choose random letter from lowerCase and append/add?
-  lowerPrompt = lowerPrompt.toUpperCase(); 
+  // lowerPrompt = lowerPrompt.toUpperCase(); 
 
-  var upperPrompt = window.prompt("Would you like uppercase letters to be included? Enter Y or N.");
+  var upperPrompt = window.confirm("Would you like uppercase letters to be included?");
   // If Y choose random from upperCase and append
-  upperPrompt = upperPrompt.toUpperCase(); 
+  // upperPrompt = upperPrompt.toUpperCase(); 
 
-  var numPrompt= window.prompt("Would you like numbers to be included? Enter Y or N.");
+  var numPrompt= window.confirm("Would you like numbers to be included?");
   // If Y choose random from numbers and append
-  numPrompt = numPrompt.toUpperCase(); 
+  // numPrompt = numPrompt.toUpperCase(); 
 
-  var specPrompt = window.prompt("Would you like special characters to be included? Enter Y or N.");
+  var specPrompt = window.confirm("Would you like special characters to be included?");
     //If Y choose random from special and append 
-  specPrompt = specPrompt.toUpperCase(); 
+  // specPrompt = specPrompt.toUpperCase(); 
   // After these first four are selected, concat all selected arrays to select random characters for rest of password 
 
   function superArray() {
