@@ -15,7 +15,7 @@ function writePassword() {
 }
 
 function generatePassword() {
-    var password = ""; 
+    var passTxt = ""; 
     var superArray = [];
 
     var passLength = Number(window.prompt("How many characters would you like your password to be? Enter a number between 8 and 128.")); 
@@ -60,8 +60,9 @@ function generatePassword() {
   // After these first four are selected, aggregate all selected arrays to select random characters for rest of password 
 
   for (i = 0 ; i < passLength; i++) {
-    password = password + (superArray[Math.floor(Math.random() * superArray.length)]);
+    passTxt = passTxt+ (superArray[Math.floor(Math.random() * superArray.length)]);
   }
+  return passTxt; 
     
     /*var passNum = function () {
       if (numPrompt) {
