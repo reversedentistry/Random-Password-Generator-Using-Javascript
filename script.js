@@ -19,18 +19,10 @@ function generatePassword() {
     var superArray = [];
 
     var passLength = Number(window.prompt("How many characters would you like your password to be? Enter a number between 8 and 128.")); 
-      if (passLength < 8) {
-        alert( "Password must be at least 8 characters. Please try again.");
-        return;
-      }
-      if (passLength > 128) {
-        alert ("Password cannot be greater than 128 characters. Please try again."); 
-        return;  
-      }
-      if (!passLength) {
-        return; 
-      }
-
+    while (passLength < 8 || passLength > 128) {
+      passLength = Number(window.prompt("How many characters would you like your password to be? Enter a number between 8 and 128."));
+    }
+    
     var lowerPrompt = window.confirm("Would you like lowercase letters to be included?");
   // If Y choose random letter from lowerCase and append/add
       if (lowerPrompt) {
