@@ -20,25 +20,22 @@ function writePassword() {
 
     var lowerPrompt = window.confirm("Would you like lowercase letters to be included?");
   // If Y choose random letter from lowerCase and append/add?
-  // lowerPrompt = lowerPrompt.toUpperCase(); 
-
+  
     var upperPrompt = window.confirm("Would you like uppercase letters to be included?");
   // If Y choose random from upperCase and append
-  // upperPrompt = upperPrompt.toUpperCase(); 
-
+  
     var numPrompt= window.confirm("Would you like numbers to be included?");
   // If Y choose random from numbers and append
-  // numPrompt = numPrompt.toUpperCase(); 
-
+  
     var specPrompt = window.confirm("Would you like special characters to be included?");
     //If Y choose random from special and append 
-  // specPrompt = specPrompt.toUpperCase(); 
+  
     
     var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
     var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];   
 
-    var special = ["$", "#", "!", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", "<", ">", "~", "?", "@", "\", "^", "|"]; 
+    var special = ["$", "#", "!", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", "<", ">", "~", "?", "@", '^', '|']; 
 
     var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]; 
 
@@ -46,19 +43,17 @@ function writePassword() {
   // After these first four are selected, aggregate all selected arrays to select random characters for rest of password 
 
     var superArray = [];
-
-      if (lowerPrompt){
-      password.append(Math.floor(Math.random() * lowerCase.length)); 
+    
+    var passNum = function () {
+      if (numPrompt) {
+        password.append(Math.floor(Math.random() * 10))
+      }
+      console.log(passNum);
+    } 
+    //for (var i = 0; i < passLength; i++) 
 
   
   }
-}
-   
-
-  
-
-
-
 }
 
 // Add event listener to generate button
