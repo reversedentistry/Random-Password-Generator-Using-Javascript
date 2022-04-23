@@ -64,34 +64,8 @@ function generatePassword() {
   }
   return passTxt; 
     
-    /*var passNum = function () {
-      if (numPrompt) {
-        password.append(Math.floor(Math.random() * 10))
-      }
-      console.log(passNum);
-   
-       
-    Math.floor(Math.random() * [array].length)*/
-     /*for (var i = 0; i < passLength; i++) 
-     {
-       if (lowerPrompt) {
-
-         passwordText.append(lowerCase[Math.floor(Math.random() * lowerCase.length)]);        
-      }
-       if(upperPrompt) {
-       
-        passwordText.append(upperCase[Math.floor(Math.random() * upperCase.length)]); 
-      }
-       if(specPrompt){
-
-         passwordText.append(special[Math.floor(Math.random() * special.length)]);
-      }
-       if(numPrompt) {
-         passwordText.append(number[Math.floor(Math.random() * numbers.length)]); 
-      }
-    }
-    console.log(passwordText); */ 
-       
+    
+     
   }
   
 
