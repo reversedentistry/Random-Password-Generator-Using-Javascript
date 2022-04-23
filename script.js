@@ -60,7 +60,7 @@ function generatePassword() {
   // After these first four are selected, aggregate all selected arrays to select random characters for rest of password 
 
   for (i = 0 ; i < passLength; i++) {
-    
+    password = password + (superArray[Math.floor(Math.random() * superArray.length)]);
   }
     
     /*var passNum = function () {
