@@ -8,6 +8,9 @@ function writePassword() {
   passwordText.value = password;
 
   function generatePassword() {
+    var passwordText = document.querySelector("#password");
+    passwordText.value = password;
+   
     var passLength = Number(window.prompt("How many characters would you like your password to be? Enter a number between 8 and 128.")); 
       if (passLength < 8) {
         alert( "Password must be at least 8 characters");
@@ -37,23 +40,42 @@ function writePassword() {
 
     var special = ["$", "#", "!", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", "<", ">", "~", "?", "@", '^', '|']; 
 
-    var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]; 
+    var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, ]; 
 
     
   // After these first four are selected, aggregate all selected arrays to select random characters for rest of password 
 
-    var superArray = [];
+    // var superArray = [];
     
-    var passNum = function () {
+    /*var passNum = function () {
       if (numPrompt) {
         password.append(Math.floor(Math.random() * 10))
       }
       console.log(passNum);
-    } 
-    //for (var i = 0; i < passLength; i++) 
+   
+       
+    Math.floor(Math.random() * [array].length)*/
+     for (var i = 0; i < passLength; i++) 
+     {
+       if (lowerPrompt) {
 
-  
+         passwordText.append(Math.floor(Math.random() * lowerCase.length));        
+      }
+       if(upperPrompt) {
+       
+        passwordText.append(Math.floor(Math.random() * upperCase.length)); 
+      }
+       if(specPrompt){
+
+         passwordText.append(Math.floor(Math.random() * special.length));
+      }
+       if(numPrompt) {
+         passwordText.append(Math.floor(Math.random() * numbers.length)); 
+      }
+    }   
+      console.log(passwordText); 
   }
+  
 }
 
 // Add event listener to generate button
