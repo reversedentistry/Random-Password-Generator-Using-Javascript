@@ -55,9 +55,7 @@ function generatePassword() {
     passTxt = passTxt+ (superArray[Math.floor(Math.random() * superArray.length)]);
   }
   return passTxt; 
-    
-    
-     
+       
   }
   
 
